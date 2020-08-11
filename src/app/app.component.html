@@ -1,0 +1,36 @@
+<header>
+    Welcome to the Minesweeper game!!
+</header>
+
+<section class="sub-heading">
+    <div>
+        Enter scale (rows and column values are same):
+        <input type="number" id="txtRow" [(ngModel)]="scale" placeholder="Scale" min="2" />
+        <button (click)="generateMine()" class="btn">Submit</button>
+    </div>
+
+    <!-- Show timer in seconds -->
+    <div>
+        Time: {{ timer }} secs.
+    </div>  
+</section>
+
+<!-- Show output if won or lost-->
+<div [hidden]="!isGameOver" [ngClass]="outputClass"></div>
+
+<div id="content">
+
+    <!-- Grid of minesweeper -->
+    <div *ngFor="let rows of mine; trackBy: rowTrackby" class="row" >
+        <div *ngFor="let cell of rows" class="col" (contextmenu)="markAsSuspect(cell)" (click)="reveal(cell)" [class.hide]="!cell.isOpen">
+
+            <div [hidden]="cell.isBomb"> {{ cell.count }} </div>
+          
+            <div [hidden]="!cell.isOpen" [class.mine]="cell.isBomb && cell.isOpen">
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+  
+</div>
