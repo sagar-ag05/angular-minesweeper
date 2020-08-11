@@ -1,0 +1,79 @@
+#content {
+    margin-top: 30px;
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    height: 60px;
+    background-color: cadetblue;
+    align-items: center;
+    font-size: 20px;
+}
+
+.sub-heading{
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    border-bottom: 1px solid cadetblue;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 10px;
+    border: 1px solid gray;
+    background-color: cadetblue;
+    padding: 9px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;    
+    justify-content: center
+}
+
+.col {
+    padding: 7px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hide {
+    background-color: black;
+    opacity: 0.2;
+}
+
+.mine {
+    width: inherit;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.mine > span {
+    background-color: white;
+    height: 6px;
+    width: 5px;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.result {
+    height: 100px;
+    background-repeat: no-repeat;
+    margin : 0 auto;
+    width: 150px;
+    background-size: contain;
+}
+
+.win { 
+    background-image: url(/assets/images/smiley.png);
+}
+
+.lost {
+    background-image: url(/assets/images/teeth.jpeg);
+}
